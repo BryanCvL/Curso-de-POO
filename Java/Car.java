@@ -1,16 +1,31 @@
-public class Car {
+class Car {
     Integer id;
     String license;
     Account driver;
-    Integer passenger;
+    private Integer passenger;
 
     public Car(String license, Account driver){
         this.license = license;
         this.driver = driver;
-
     }
 
     void printDataCar() {
-        System.out.println("License: " + license + " Name Driver: " + driver.name);
+        if (passenger != null) {
+            System.out.println("License: " + license 
+            + "\nName Driver: " + driver.name + "\nPassengers: " + passenger);
+        }
+    }
+
+    public Integer getPassenger(){
+        return passenger;
+    }
+
+    public void setPassenger(Integer passenger) {
+        if (passenger == 4) {
+            this.passenger = passenger;
+
+        }else {
+            System.out.println("You must assign 4 passengers");
+        }
     }
 }
