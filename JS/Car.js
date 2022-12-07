@@ -18,10 +18,12 @@ class Car {
     //     console.log(this.driver.name)
     //     console.log(this.driver.document)
     // }
-    printDataCar = () => {
+    printDataCar = (license, driver, brand, model) => {
         console.table(this.driver) //imprimirá una tabla con todos los datos
         console.log(this.driver.name)
         console.log(this.driver.document)
+        console.log(this.brand)
+        console.log(this.model)
     }
 }
 
